@@ -56,12 +56,10 @@ div[data-testid="metric-container"]{
 
 @st.cache_data
 def load_data():
-
     df = pd.read_csv(
-        "data/APL_Logistics.csv",
+        "APL_Logistics.csv",
         encoding="latin1"
     )
-
     return df
 
 # ==========================================================
@@ -72,11 +70,11 @@ def load_data():
 def load_model():
 
     model = joblib.load(
-        "Models/Late_Delivery_Risk_Model.pkl"
+        "Late_Delivery_Risk_Model.pkl"
     )
 
     scaler = joblib.load(
-        "Models/Scaler.pkl"
+        "Scaler.pkl"
     )
 
     return model, scaler
@@ -89,7 +87,7 @@ def load_model():
 def load_encoders():
 
     return joblib.load(
-        "Models/LabelEncoders.pkl"
+        "LabelEncoders.pkl"
     )
 
 # ==========================================================
@@ -100,7 +98,7 @@ def load_encoders():
 def load_feature_names():
 
     return joblib.load(
-        "Models/model_features.pkl"
+        "model_features.pkl"
     )
 
 # ==========================================================
